@@ -1,10 +1,8 @@
-version: "3.8"
-
 services:
   auditor:
     build: .
     ports:
-      - "8501:8501"
+      - "8502:8501"
     volumes:
       - ./blueprint.md:/app/blueprint.md
       - ./expenses_data.json:/app/expenses_data.json
