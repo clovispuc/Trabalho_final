@@ -1,0 +1,18 @@
+version: "3.8"
+
+services:
+  auditor:
+    build: .
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./blueprint.md:/app/blueprint.md
+      - ./expenses_data.json:/app/expenses_data.json
+    environment:
+      - PYTHONUNBUFFERED=1
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c", "import socket,sys; s=socket.socket(); s.settimeout(1); s.connect(('localhost',8501)); s.close();"]
+      interval: 15s
+      timeout: 5s
+      retries: 5

@@ -1,0 +1,23 @@
+[
+  {
+    "name": "João",
+    "category": "alimentacao",
+    "amount": 120.00,
+    "metadata": {},
+    "sensitive": {"card": "4532 1111 2222 3333"}
+  },
+  {
+    "name": "Maria",
+    "category": "hospedagem",
+    "amount": 500.00,
+    "metadata": {"cep": "01000-000"},
+    "sensitive": {"card": "1111 2222 3333 4444"}
+  },
+  {
+    "name": "Carlos",
+    "category": "alimentacao",
+    "amount": 45.00,
+    "metadata": {},
+    "sensitive": {"card": ""}
+  }
+]
