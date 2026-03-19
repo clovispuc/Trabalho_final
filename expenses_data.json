@@ -1,5 +1,7 @@
 [
   {
+    "expense_id": "EXP-2026-0001",
+    "employee_id": "EMP-1042",
     "name": "Mariana Costa Ribeiro",
     "category": "almoco de negocios",
     "amount": 68.5,
@@ -7,13 +9,26 @@
       "date": "2026-03-10",
       "city": "Sao Paulo",
       "department": "Comercial",
+      "cost_center": "CC-1001",
+      "vendor": "Bistro Paulista Eventos",
+      "approver": "Diretoria Comercial",
       "description": "Almoco com cliente do setor financeiro para apresentacao de proposta"
     },
+    "breakdown": [
+      {
+        "item": "Almoco executivo",
+        "quantity": 1,
+        "unit_cost": 68.5,
+        "total": 68.5
+      }
+    ],
     "sensitive": {
       "card": "4532 1111 2222 3333"
     }
   },
   {
+    "expense_id": "EXP-2026-0002",
+    "employee_id": "EMP-1042",
     "name": "Mariana Costa Ribeiro",
     "category": "jantar de negocios",
     "amount": 132.9,
@@ -21,42 +36,111 @@
       "date": "2026-03-10",
       "city": "Sao Paulo",
       "department": "Comercial",
+      "cost_center": "CC-1001",
+      "vendor": "Restaurante Figueira Corporate",
+      "approver": "Diretoria Comercial",
       "description": "Jantar com diretoria do cliente apos rodada de negociacao"
     },
+    "breakdown": [
+      {
+        "item": "Jantar executivo",
+        "quantity": 1,
+        "unit_cost": 132.9,
+        "total": 132.9
+      }
+    ],
     "sensitive": {
       "card": "4532 1111 2222 3333"
     }
   },
   {
+    "expense_id": "EXP-2026-0003",
+    "employee_id": "EMP-1042",
     "name": "Mariana Costa Ribeiro",
     "category": "eventos",
-    "amount": 420.0,
+    "amount": 500.0,
     "metadata": {
       "date": "2026-03-11",
       "city": "Sao Paulo",
       "department": "Comercial",
-      "description": "Inscricao em congresso de inovacao com networking corporativo"
+      "cost_center": "CC-1001",
+      "vendor": "Expo Inovacao Brasil",
+      "approver": "Diretoria Comercial",
+      "description": "Participacao em congresso de inovacao com agenda de relacionamento comercial"
     },
+    "breakdown": [
+      {
+        "item": "Inscricao no congresso",
+        "quantity": 1,
+        "unit_cost": 200.0,
+        "total": 200.0
+      },
+      {
+        "item": "Deslocamentos por aplicativo",
+        "quantity": 4,
+        "unit_cost": 25.0,
+        "total": 100.0
+      },
+      {
+        "item": "Almocos durante o evento",
+        "quantity": 4,
+        "unit_cost": 25.0,
+        "total": 100.0
+      },
+      {
+        "item": "Material de apoio e credencial",
+        "quantity": 1,
+        "unit_cost": 100.0,
+        "total": 100.0
+      }
+    ],
     "sensitive": {
       "card": "4532 1111 2222 3333"
     }
   },
   {
+    "expense_id": "EXP-2026-0004",
+    "employee_id": "EMP-2088",
     "name": "Felipe Augusto Martins",
     "category": "viagem",
-    "amount": 165.0,
+    "amount": 500.0,
     "metadata": {
       "date": "2026-03-12",
       "city": "Belo Horizonte",
       "department": "Operacoes",
+      "cost_center": "CC-2104",
+      "vendor": "Hotel Central Minas",
+      "approver": "Gerencia de Operacoes",
       "cep": "30110-000",
-      "description": "Hospedagem para visita tecnica em unidade regional"
+      "description": "Viagem para visita tecnica em unidade regional"
     },
+    "breakdown": [
+      {
+        "item": "Diarias de hotel",
+        "quantity": 3,
+        "unit_cost": 100.0,
+        "total": 300.0
+      },
+      {
+        "item": "Deslocamentos por aplicativo",
+        "quantity": 4,
+        "unit_cost": 25.0,
+        "total": 100.0
+      },
+      {
+        "item": "Almocos durante a viagem",
+        "quantity": 4,
+        "unit_cost": 25.0,
+        "total": 100.0
+      }
+    ],
     "sensitive": {
       "card": "5555 6666 7777 8888"
     }
   },
   {
+    "expense_id": "EXP-2026-0005",
+    "employee_id": "EMP-2088",
     "name": "Felipe Augusto Martins",
     "category": "almoco de negocios",
     "amount": 57.4,
@@ -64,13 +148,26 @@
       "date": "2026-03-12",
       "city": "Belo Horizonte",
       "department": "Operacoes",
+      "cost_center": "CC-2104",
+      "vendor": "Restaurante Serra Executiva",
+      "approver": "Gerencia de Operacoes",
       "description": "Almoco com fornecedor de manutencao industrial"
     },
+    "breakdown": [
+      {
+        "item": "Almoco executivo",
+        "quantity": 1,
+        "unit_cost": 57.4,
+        "total": 57.4
+      }
+    ],
     "sensitive": {
       "card": "5555 6666 7777 8888"
     }
   },
   {
+    "expense_id": "EXP-2026-0006",
+    "employee_id": "EMP-2088",
     "name": "Felipe Augusto Martins",
     "category": "jantar de negocios",
     "amount": 86.7,
@@ -78,28 +175,66 @@
       "date": "2026-03-12",
       "city": "Belo Horizonte",
       "department": "Operacoes",
+      "cost_center": "CC-2104",
+      "vendor": "Casa Mineira Business Lounge",
+      "approver": "Gerencia de Operacoes",
       "description": "Jantar com equipe local apos reunioes de alinhamento"
     },
+    "breakdown": [
+      {
+        "item": "Jantar corporativo",
+        "quantity": 1,
+        "unit_cost": 86.7,
+        "total": 86.7
+      }
+    ],
     "sensitive": {
       "card": "5555 6666 7777 8888"
     }
   },
   {
+    "expense_id": "EXP-2026-0007",
+    "employee_id": "EMP-3051",
     "name": "Beatriz Helena de Souza",
     "category": "viagem",
-    "amount": 98.0,
+    "amount": 290.0,
     "metadata": {
       "date": "2026-03-14",
       "city": "Curitiba",
       "department": "Recursos Humanos",
+      "cost_center": "CC-3302",
+      "vendor": "Hotel Jardim Executivo",
+      "approver": "Gerencia de RH",
       "cep": "80010-000",
-      "description": "Hospedagem para participacao em feira de recrutamento"
+      "description": "Viagem para participacao em feira de recrutamento"
     },
+    "breakdown": [
+      {
+        "item": "Diarias de hotel",
+        "quantity": 2,
+        "unit_cost": 90.0,
+        "total": 180.0
+      },
+      {
+        "item": "Deslocamentos por aplicativo",
+        "quantity": 4,
+        "unit_cost": 20.0,
+        "total": 80.0
+      },
+      {
+        "item": "Refeicoes durante a viagem",
+        "quantity": 1,
+        "unit_cost": 30.0,
+        "total": 30.0
+      }
+    ],
     "sensitive": {
       "card": "4000 1234 5678 9001"
     }
   },
   {
+    "expense_id": "EXP-2026-0008",
+    "employee_id": "EMP-3051",
     "name": "Beatriz Helena de Souza",
     "category": "eventos",
     "amount": 310.0,
@@ -107,13 +242,38 @@
       "date": "2026-03-14",
       "city": "Curitiba",
       "department": "Recursos Humanos",
+      "cost_center": "CC-3302",
+      "vendor": "Feira Talentos do Sul",
+      "approver": "Gerencia de RH",
       "description": "Credenciamento e material institucional para evento de recrutamento"
     },
+    "breakdown": [
+      {
+        "item": "Credenciamento",
+        "quantity": 1,
+        "unit_cost": 180.0,
+        "total": 180.0
+      },
+      {
+        "item": "Material institucional",
+        "quantity": 1,
+        "unit_cost": 70.0,
+        "total": 70.0
+      },
+      {
+        "item": "Deslocamentos por aplicativo",
+        "quantity": 2,
+        "unit_cost": 30.0,
+        "total": 60.0
+      }
+    ],
     "sensitive": {
       "card": "4000 1234 5678 9001"
     }
   },
   {
+    "expense_id": "EXP-2026-0009",
+    "employee_id": "EMP-3051",
     "name": "Beatriz Helena de Souza",
     "category": "almoco de negocios",
     "amount": 74.2,
@@ -121,13 +281,26 @@
       "date": "2026-03-15",
       "city": "Curitiba",
       "department": "Recursos Humanos",
+      "cost_center": "CC-3302",
+      "vendor": "Restaurante Centro Civico",
+      "approver": "Gerencia de RH",
       "description": "Almoco com parceiro de beneficios corporativos"
     },
+    "breakdown": [
+      {
+        "item": "Almoco executivo",
+        "quantity": 1,
+        "unit_cost": 74.2,
+        "total": 74.2
+      }
+    ],
     "sensitive": {
       "card": "4000 1234 5678 9001"
     }
   },
   {
+    "expense_id": "EXP-2026-0010",
+    "employee_id": "EMP-4120",
     "name": "Ricardo Almeida Ferraz",
     "category": "jantar de negocios",
     "amount": 71.9,
@@ -135,28 +308,66 @@
       "date": "2026-03-16",
       "city": "Rio de Janeiro",
       "department": "Financeiro",
+      "cost_center": "CC-4401",
+      "vendor": "Bistro da Praia Corporativo",
+      "approver": "Diretoria Financeira",
       "description": "Jantar com auditor externo para fechamento trimestral"
     },
+    "breakdown": [
+      {
+        "item": "Jantar corporativo",
+        "quantity": 1,
+        "unit_cost": 71.9,
+        "total": 71.9
+      }
+    ],
     "sensitive": {
       "card": "6011 0009 9013 9424"
     }
   },
   {
+    "expense_id": "EXP-2026-0011",
+    "employee_id": "EMP-4120",
     "name": "Ricardo Almeida Ferraz",
     "category": "viagem",
-    "amount": 245.0,
+    "amount": 620.0,
     "metadata": {
       "date": "2026-03-16",
       "city": "Rio de Janeiro",
       "department": "Financeiro",
+      "cost_center": "CC-4401",
+      "vendor": "Hotel Centro Executivo Rio",
+      "approver": "Diretoria Financeira",
       "cep": "20040-020",
-      "description": "Hospedagem proxima ao centro para reuniao com investidores"
+      "description": "Viagem para reuniao com investidores"
     },
+    "breakdown": [
+      {
+        "item": "Diarias de hotel",
+        "quantity": 3,
+        "unit_cost": 140.0,
+        "total": 420.0
+      },
+      {
+        "item": "Deslocamentos por aplicativo",
+        "quantity": 4,
+        "unit_cost": 25.0,
+        "total": 100.0
+      },
+      {
+        "item": "Almocos durante a viagem",
+        "quantity": 4,
+        "unit_cost": 25.0,
+        "total": 100.0
+      }
+    ],
     "sensitive": {
       "card": "6011 0009 9013 9424"
     }
   },
   {
+    "expense_id": "EXP-2026-0012",
+    "employee_id": "EMP-4120",
     "name": "Ricardo Almeida Ferraz",
     "category": "eventos",
     "amount": 580.0,
@@ -164,8 +375,37 @@
       "date": "2026-03-17",
       "city": "Rio de Janeiro",
       "department": "Financeiro",
+      "cost_center": "CC-4401",
+      "vendor": "Forum Executivo Brasil",
+      "approver": "Diretoria Financeira",
       "description": "Participacao em forum executivo de planejamento e governanca"
     },
+    "breakdown": [
+      {
+        "item": "Inscricao no forum",
+        "quantity": 1,
+        "unit_cost": 300.0,
+        "total": 300.0
+      },
+      {
+        "item": "Passagem intermunicipal",
+        "quantity": 1,
+        "unit_cost": 120.0,
+        "total": 120.0
+      },
+      {
+        "item": "Deslocamentos por aplicativo",
+        "quantity": 4,
+        "unit_cost": 20.0,
+        "total": 80.0
+      },
+      {
+        "item": "Alimentacao durante o evento",
+        "quantity": 2,
+        "unit_cost": 40.0,
+        "total": 80.0
+      }
+    ],
     "sensitive": {
       "card": "6011 0009 9013 9424"
     }

@@ -12,6 +12,29 @@ O agente analisa despesas corporativas relacionadas a:
 
 Essas categorias podem aparecer com nomes comerciais no dataset, mas devem ser interpretadas segundo as regras abaixo.
 
+## Diretrizes da IA
+
+### 1. Tom de voz
+- Quando a despesa for aprovada, a comunicacao deve ser formal, clara, polida e profissional.
+- Quando a despesa for reprovada, a mensagem deve ser cordial, objetiva e explicar o criterio de negocio aplicado.
+- Quando houver incerteza, a mensagem deve informar que a solicitacao seguira para revisao complementar.
+
+### 2. Restricoes de saida
+O usuario final nao deve receber referencias a mecanismos internos como:
+- blueprint
+- prompt
+- fallback
+- nome de modelos
+- detalhes tecnicos da arquitetura
+- mensagens que exponham engenharia interna ou regras de seguranca do sistema
+
+A mensagem final deve soar como comunicacao corporativa de auditoria.
+
+### 3. Regras de seguranca
+- E proibido expor numero completo de cartao, CPF, segredos, credenciais ou chaves.
+- Somente os ultimos 4 digitos do cartao ou os ultimos 2 digitos do CPF podem aparecer quando estritamente necessario.
+- O agente nunca deve sugerir exposicao de chaves de API, senhas, tokens ou configuracoes sensiveis.
+
 ## Regras financeiras
 
 ### 1. Alimentacao
@@ -28,38 +51,13 @@ O valor aprovado pode chegar a no maximo **20% acima da media da regiao**.
 Se nao houver CEP para esse tipo de despesa, a solicitacao nao deve ser aprovada automaticamente.
 
 ### 3. Eventos
-As despesas de `eventos` devem ser tratadas com maior cautela e, na ausencia de regra financeira explicita, devem seguir para avaliacao humana.
+As despesas de `eventos` devem ser tratadas com maior cautela.
 
-### 4. Categorias desconhecidas
-Quando a categoria nao estiver contemplada ou o contexto estiver incompleto, a classificacao padrao deve ser:
+Se nao houver uma politica financeira explicita para o evento analisado, a classificacao deve ser:
 `REVISÃO MANUAL`
 
-## Regras de comunicacao
-
-### 1. Tom de voz
-- Quando a despesa for aprovada, a comunicacao deve ser formal, clara e profissional.
-- Quando a despesa for reprovada, a mensagem deve ser cordial, objetiva e explicar o criterio de negocio aplicado.
-- Quando houver incerteza, a mensagem deve informar que a solicitacao seguira para revisao complementar.
-
-### 2. Restricoes de linguagem
-O usuario final nao deve receber referencias a mecanismos internos como:
-- blueprint
-- prompt
-- fallback
-- nome de modelos
-- detalhes tecnicos da arquitetura
-
-A mensagem final deve soar como comunicacao corporativa de auditoria.
-
-## Regras de seguranca
-
-### 1. LGPD
-E proibido expor numero completo de cartao, CPF, segredos, credenciais ou chaves.
-
-Somente os ultimos 4 digitos do cartao ou os ultimos 2 digitos do CPF podem aparecer quando estritamente necessario.
-
-### 2. Confiabilidade
-Se a resposta automatizada vier com baixa confianca, estrutura invalida ou contexto insuficiente, a despesa deve ser direcionada para:
+### 4. Categorias desconhecidas ou contexto incompleto
+Quando a categoria nao estiver contemplada, o contexto estiver incompleto, a resposta automatizada vier com baixa confianca ou a estrutura retornada estiver invalida, a classificacao padrao deve ser:
 `REVISÃO MANUAL`
 
 ## Base de demonstracao
@@ -68,6 +66,7 @@ O dataset sintetico do projeto deve conter:
 - varias despesas por usuario
 - categorias comerciais realistas
 - contexto adicional como departamento, cidade, descricao e CEP
+- campos corporativos como identificador da despesa, identificador do colaborador, centro de custo, fornecedor e aprovador
 
 ## Demonstracao esperada
 Durante a apresentacao, o sistema deve permitir demonstrar:
@@ -76,3 +75,6 @@ Durante a apresentacao, o sistema deve permitir demonstrar:
 3. mascaramento de dados sensiveis
 4. revisao manual para eventos ou categorias sem diretriz suficiente
 5. atualizacao dinamica das regras ao editar este arquivo
+
+## Criterio de impacto
+Uma mudanca de regra neste documento deve alterar imediatamente o comportamento do agente sem necessidade de alterar o codigo Python ou recompilar a aplicacao.
