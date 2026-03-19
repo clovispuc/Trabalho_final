@@ -21,12 +21,20 @@ def main():
     data_path = Path(__file__).parent / "expenses_data.json"
     blueprint_path = Path(__file__).parent / "blueprint.md"
 
-    st.sidebar.header("Configuração")
+    agent = AgentCore(blueprint_path)
+    expenses = load_expenses(data_path)
+
+    st.sidebar.header("Configuracao")
     st.sidebar.markdown(f"- Blueprint: `{blueprint_path.name}`")
     st.sidebar.markdown(f"- Dados: `{data_path.name}`")
+    st.sidebar.markdown(
+        "- Motor de decisao: `Gemini`" if agent.is_gemini_configured() else "- Motor de decisao: `Fallback local`"
+    )
 
-    expenses = load_expenses(data_path)
-    agent = AgentCore(blueprint_path)
+    if not agent.is_gemini_configured():
+        st.warning(
+            "GEMINI_API_KEY nao configurada. O sistema continua funcionando com o auditor local como fallback."
+        )
 
     st.markdown("---")
     st.markdown("## Despesas")
@@ -38,32 +46,25 @@ def main():
         card = expense.get("sensitive", {}).get("card", "")
         card_masked = mascarar_dados_sensiveis(card)
 
-        with st.expander(f"{idx+1}. {name} — {category} — R$ {amount:.2f}"):
+        with st.expander(f"{idx + 1}. {name} - {category} - R$ {amount:.2f}"):
             st.write("**Detalhes da despesa:**")
             st.write(f"- Nome: **{name}**")
             st.write(f"- Categoria: **{category}**")
             st.write(f"- Valor: **R$ {amount:.2f}**")
-            st.write(f"- Cartão/CPF: **{card_masked}**")
+            st.write(f"- Cartao/CPF: **{card_masked}**")
 
             if st.button("Processar Auditoria com Agente IA", key=f"audit_{idx}"):
                 result = agent.analyze_expense(expense)
                 audit_result = result["audit_result"]
-                llm_prompt = result["llm_prompt"]
-                llm_response = result["llm_response"]
 
                 st.markdown("---")
                 st.markdown("### Resultado da Auditoria")
                 st.write(f"- **Status:** {audit_result.status}")
                 st.write(f"- **Motivo:** {audit_result.reason}")
-                st.write(f"- **Resposta do Agente:**")
+                st.write(f"- **Canal de analise:** {result['decision_source']}")
+                st.write(f"- **Observacao operacional:** {result['decision_detail']}")
+                st.write("**Resposta do Agente:**")
                 st.code(audit_result.response)
-
-                st.markdown("---")
-                st.markdown("### (Simulação LLM)")
-                st.write("**Prompt enviado ao LLM (para debug):**")
-                st.code(llm_prompt)
-                st.write("**Resposta simulada do LLM:**")
-                st.code(llm_response)
 
 
 if __name__ == "__main__":

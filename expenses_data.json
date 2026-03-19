@@ -1,23 +1,173 @@
 [
   {
-    "name": "João",
-    "category": "alimentacao",
-    "amount": 120.00,
-    "metadata": {},
-    "sensitive": {"card": "4532 1111 2222 3333"}
+    "name": "Mariana Costa Ribeiro",
+    "category": "almoco de negocios",
+    "amount": 68.5,
+    "metadata": {
+      "date": "2026-03-10",
+      "city": "Sao Paulo",
+      "department": "Comercial",
+      "description": "Almoco com cliente do setor financeiro para apresentacao de proposta"
+    },
+    "sensitive": {
+      "card": "4532 1111 2222 3333"
+    }
   },
   {
-    "name": "Maria",
-    "category": "hospedagem",
-    "amount": 500.00,
-    "metadata": {"cep": "01000-000"},
-    "sensitive": {"card": "1111 2222 3333 4444"}
+    "name": "Mariana Costa Ribeiro",
+    "category": "jantar de negocios",
+    "amount": 132.9,
+    "metadata": {
+      "date": "2026-03-10",
+      "city": "Sao Paulo",
+      "department": "Comercial",
+      "description": "Jantar com diretoria do cliente apos rodada de negociacao"
+    },
+    "sensitive": {
+      "card": "4532 1111 2222 3333"
+    }
   },
   {
-    "name": "Carlos",
-    "category": "alimentacao",
-    "amount": 45.00,
-    "metadata": {},
-    "sensitive": {"card": ""}
+    "name": "Mariana Costa Ribeiro",
+    "category": "eventos",
+    "amount": 420.0,
+    "metadata": {
+      "date": "2026-03-11",
+      "city": "Sao Paulo",
+      "department": "Comercial",
+      "description": "Inscricao em congresso de inovacao com networking corporativo"
+    },
+    "sensitive": {
+      "card": "4532 1111 2222 3333"
+    }
+  },
+  {
+    "name": "Felipe Augusto Martins",
+    "category": "viagem",
+    "amount": 165.0,
+    "metadata": {
+      "date": "2026-03-12",
+      "city": "Belo Horizonte",
+      "department": "Operacoes",
+      "cep": "30110-000",
+      "description": "Hospedagem para visita tecnica em unidade regional"
+    },
+    "sensitive": {
+      "card": "5555 6666 7777 8888"
+    }
+  },
+  {
+    "name": "Felipe Augusto Martins",
+    "category": "almoco de negocios",
+    "amount": 57.4,
+    "metadata": {
+      "date": "2026-03-12",
+      "city": "Belo Horizonte",
+      "department": "Operacoes",
+      "description": "Almoco com fornecedor de manutencao industrial"
+    },
+    "sensitive": {
+      "card": "5555 6666 7777 8888"
+    }
+  },
+  {
+    "name": "Felipe Augusto Martins",
+    "category": "jantar de negocios",
+    "amount": 86.7,
+    "metadata": {
+      "date": "2026-03-12",
+      "city": "Belo Horizonte",
+      "department": "Operacoes",
+      "description": "Jantar com equipe local apos reunioes de alinhamento"
+    },
+    "sensitive": {
+      "card": "5555 6666 7777 8888"
+    }
+  },
+  {
+    "name": "Beatriz Helena de Souza",
+    "category": "viagem",
+    "amount": 98.0,
+    "metadata": {
+      "date": "2026-03-14",
+      "city": "Curitiba",
+      "department": "Recursos Humanos",
+      "cep": "80010-000",
+      "description": "Hospedagem para participacao em feira de recrutamento"
+    },
+    "sensitive": {
+      "card": "4000 1234 5678 9001"
+    }
+  },
+  {
+    "name": "Beatriz Helena de Souza",
+    "category": "eventos",
+    "amount": 310.0,
+    "metadata": {
+      "date": "2026-03-14",
+      "city": "Curitiba",
+      "department": "Recursos Humanos",
+      "description": "Credenciamento e material institucional para evento de recrutamento"
+    },
+    "sensitive": {
+      "card": "4000 1234 5678 9001"
+    }
+  },
+  {
+    "name": "Beatriz Helena de Souza",
+    "category": "almoco de negocios",
+    "amount": 74.2,
+    "metadata": {
+      "date": "2026-03-15",
+      "city": "Curitiba",
+      "department": "Recursos Humanos",
+      "description": "Almoco com parceiro de beneficios corporativos"
+    },
+    "sensitive": {
+      "card": "4000 1234 5678 9001"
+    }
+  },
+  {
+    "name": "Ricardo Almeida Ferraz",
+    "category": "jantar de negocios",
+    "amount": 71.9,
+    "metadata": {
+      "date": "2026-03-16",
+      "city": "Rio de Janeiro",
+      "department": "Financeiro",
+      "description": "Jantar com auditor externo para fechamento trimestral"
+    },
+    "sensitive": {
+      "card": "6011 0009 9013 9424"
+    }
+  },
+  {
+    "name": "Ricardo Almeida Ferraz",
+    "category": "viagem",
+    "amount": 245.0,
+    "metadata": {
+      "date": "2026-03-16",
+      "city": "Rio de Janeiro",
+      "department": "Financeiro",
+      "cep": "20040-020",
+      "description": "Hospedagem proxima ao centro para reuniao com investidores"
+    },
+    "sensitive": {
+      "card": "6011 0009 9013 9424"
+    }
+  },
+  {
+    "name": "Ricardo Almeida Ferraz",
+    "category": "eventos",
+    "amount": 580.0,
+    "metadata": {
+      "date": "2026-03-17",
+      "city": "Rio de Janeiro",
+      "department": "Financeiro",
+      "description": "Participacao em forum executivo de planejamento e governanca"
+    },
+    "sensitive": {
+      "card": "6011 0009 9013 9424"
+    }
   }
 ]
